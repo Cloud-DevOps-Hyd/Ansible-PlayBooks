@@ -1,0 +1,8 @@
+---
+- hosts: appserver
+  tasks:
+  - name: Creating a file in the App Server Group.
+    file:
+      path: "/root/Downloads/sum.java"
+      state: touch
+

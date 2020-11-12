@@ -1,0 +1,7 @@
+---
+- hosts: testserver.com
+  tasks:
+  - name: Creatig a empty file
+    file:
+      path: "/root/Desktop/Cloud-DevOps-by-Ansible-Playbook"
+      state: absent 
