@@ -1,0 +1,23 @@
+---
+- hosts: all
+  tasks:
+    - name: Install java
+      yum:
+        name: java
+        state: latest
+    - name: Install Git Software in remote machines
+      yum:
+        name: git
+        state: latest
+    - name: Copying the Tomcat Software
+      copy: src="/root/Desktop/apache-tomcat-8.5.59.tar.gz dest=/opt/Tomcat"
+    - name: createing a directory
+      file:
+        path: /opt/Cloud-Devops123
+        state: directory
+    - name: copying the Jenkins.war from Desktop to Webapps Folder
+      copy: src="/root/Desktop/jenkins.war /opt/apache-tomcat-8.5.59/webapps"
+    - name: unarchiveing  The Tomcat Software in opt Folder
+      unarchive: src=/opt/apache-tomcat-8.5.59.tar.gz dest=/opt copy=no
+    - name: Starting the Tomcat Software Service
+      command: nohup /opt/apache-tomcat-8.5.59/bin/startup.sh &

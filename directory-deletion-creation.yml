@@ -1,0 +1,12 @@
+---
+- hosts: all
+  tasks:
+  - name: Deleting a Directory in all Remote Servers
+    file:
+      path: "/root/Downloads/Test-Directory"
+      state: absent
+  - name: Creating a new Directory in Downloads
+    file:
+      path: "/opt/Test-Directory"
+      state: directory
+

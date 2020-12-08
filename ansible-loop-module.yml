@@ -1,0 +1,21 @@
+---
+ - name: working on loop module
+   hosts: localhost
+   gather_facts: flase
+   tasks:
+     - name: Iterate the value over hashes
+       debug:
+         msg:
+          - "Hi ' {{ item.fname }}', nice to meet you"
+          - "Your Last name as per our record is ' {{ item.lname }} "
+          - "your origin Country of residence is ' {{ item.location }}"
+       loop:
+        - { fname: 'Cloud', lname: 'DevOps', location: 'India - HYD' }   
+        - { fname: 'Srikanth', lname: 'DevOps', location: 'Hyderabad - HYD' }   
+        - { fname: 'Sidhantha', lname: 'AWS', location: 'India - Odisa' }   
+        - { fname: 'Prasanth', lname: 'Linux', location: 'India - Nalgonda' }   
+        - { fname: 'Srinu', lname: 'Ravula', location: 'India - AP' }   
+        - { fname: 'Thota', lname: 'Thanish', location: 'India - ATP' }   
+        - { fname: 'Jeevan', lname: 'Sai', location: 'India - Karnool' }   
+        - { fname: 'prathaf', lname: 'goud', location: 'India - Kadapa' }   
+

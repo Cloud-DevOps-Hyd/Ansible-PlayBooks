@@ -1,0 +1,25 @@
+---
+ - name: Working with arithmetic operations
+   hosts: localhost 
+   gather_facts: false
+   vars:
+    number1: 50
+    number2: 40
+    number3: 20
+    num4: 20
+   tasks:
+    - name: "calculation Operations"
+      debug:
+        msg:
+          - "The Number 1 Value is : {{ number1 }}"
+          - "The number 2 Value is : {{ number2 }}"
+          - "The Number 3 Value is : {{ number3 }}"
+          - "The sum of Three numbers number1 number2 number3 : {{ number1+number2+number3 }}"
+          - "The Substraction of Two values : {{ number1-number3 }}"
+          - "The Multiplication of Two values Number3 and Number2 : {{ number2*number3 }}"
+          - "The Division of Two Numbers Number 2 and number 3 : {{ number2/number3 }}"
+          - "The Remainder value of two numbers number1 and number3 : {{number1%number3 }}"
+          - "The Biggest is {{ number1 }} :  {{ number1>number3}} is a bigget number"
+          - "{{ number3<number2 }} {{number3 }} is the Smallest number than number  {{number2}} "
+          - " Not Equal Numbers {{number1}} and {{number3}} : Answer from the machine : {{number1==number2}}"
+          - " Both numbers are equal number 4 {{num4}} and number 3 {{number3}} answer from the machine {{num4==number3}} "

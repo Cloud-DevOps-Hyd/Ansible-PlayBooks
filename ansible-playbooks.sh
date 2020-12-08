@@ -1,0 +1,20 @@
+ansible-playbook directory.yml
+ansible-playbook directory-creation-by-playbook.yml
+ansible-playbook directory-deletion-creation.yml
+ansible-playbook filecreation.yml
+ansible-playbook flush-handlers.yml
+ansible-playbook git-install.yml
+ansible-playbook git-remove.yml
+ansible-playbook httpd-install.yml
+ansible-playbook httpdremove.yml
+ansible-playbook installhttpd.yml
+ansible-playbook java-git-install.yml
+ansible-playbook java-install.yml
+ansible-playbook java-remove.yml
+ansible-playbook jenkinsdownload.yml
+ansible-playbook jenkins.yml
+ansible-playbook testoperations.yml
+ansible-playbook tomcatdownload.yml
+ansible-playbook tomcat.yml
+ansible-playbook uninstallhttpd.yml
+

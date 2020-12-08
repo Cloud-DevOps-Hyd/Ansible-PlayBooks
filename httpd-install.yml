@@ -1,0 +1,15 @@
+---
+ - name:
+   hosts: nexusserver.com
+   gather_facts: true 
+   tasks:
+     - name: Install HTTPD Package
+       yum:
+        name: httpd 
+        state: latest
+     - name:
+       debug:
+         msg:
+          - "This play book in Final Level"
+   
+        

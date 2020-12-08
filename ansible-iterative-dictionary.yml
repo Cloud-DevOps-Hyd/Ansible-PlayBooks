@@ -1,0 +1,17 @@
+---
+ - name: Working with key-value loop module
+   hosts: localhost
+   gather_facts: false
+   tasks:
+     - name: Iterate the value over Dictionary
+       debug:
+         msg:
+          - "The {{ item.key }}  of our Apple is {{ item.value }}"
+       loop: "{{ apple | dict2items }}"
+       vars:
+         apple:
+           Color: Red
+           Origin: India
+           Price: Rs50-00
+
+          

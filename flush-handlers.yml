@@ -1,0 +1,21 @@
+---
+ - name: Handlers Flush Example
+   hosts: localhost
+   gather_facts: false
+   become: true
+   tasks:
+     - name: Printing the Message First One.
+       debug:
+         msg: "This is First Messge"
+       changed_when: true
+       notify: run_handler
+     - name: Printing the Message Second One.
+       debug:
+         msg: "This is Second Message"
+       changed_when: true
+       notify: run_handler
+   handlers:
+     - name: run_handler
+       debug:
+         msg: "Todays's Date and Time: {{ '%S:%M:%H %d-%m-%y' | strftime }}"
+

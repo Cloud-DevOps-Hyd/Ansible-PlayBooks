@@ -1,0 +1,23 @@
+---
+ - name: Test Operations
+   hosts: localhost
+   gather_facts: false
+   vars:
+    list1: [this, is, our, sample, playbook, with, testoperations]
+    val1: "this"
+    val2: "THIS"
+    my_file_path: '/root/Desktop/Ansible-PlayBooks/testoperations.yml'
+    my_dir_path: '/root/Desktop/Ansible-PlayBooks'
+    my_dir_path: '/temp/dummy'
+    my_name: 'Cloud DevOps'
+    number1: 40
+   tasks:
+      - name: Validate the Test Operations
+        debug:
+          msg:
+            - "The List1 Variable contains: {{list1}}"
+            - "Value 2 is in list1 : {{ val2 in list1 }}"
+            - "Value 2  is not in list1 {{ val2 not in list1 }}"
+            - "Number1 is defined : {{ number1 is defined}} "
+            - "Number2 is not defined : {{ number2 is defined }} "
+            

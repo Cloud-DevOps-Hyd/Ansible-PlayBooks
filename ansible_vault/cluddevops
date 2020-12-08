@@ -1,0 +1,6 @@
+---
+ - name: Executing the Date in Nexusserver by using Vault
+   hosts: nexusserver.com 
+   tasks:
+     - name: Executing Date command 
+       command: date

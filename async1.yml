@@ -1,0 +1,16 @@
+---
+- name: Playbook by using async
+  hosts: all
+  tasks:
+    - name: Copy the File
+      copy:
+        src: "/root/Desktop/testscript.sh"
+        dest: /root/Desktop
+    - name: Running the shell file
+      shell:
+        "chmod a+x /root/Desktop/testscript.sh && /root/Desktop/testscript.sh 40"
+      async: 100
+      poll: 05
+      register: scrout
+    - name: debuging the task
+      debug: var=scrout.stdout_lines

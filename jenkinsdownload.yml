@@ -1,0 +1,9 @@
+---
+- hosts: 192.168.121.138
+  user: root
+  become: true
+  tasks:
+  - name: Downloading the jenkins
+    get_url:
+      url: https://get.jenkins.io/war-stable/2.249.3/jenkins.war
+      dest: /root/Downloads

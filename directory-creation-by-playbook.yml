@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+  - name: Creating a Directory in all Remote Servers
+    file:
+      path: "/root/Desktop/Cloud-DevOps-Directory-by-Plabook"
+      state: directory

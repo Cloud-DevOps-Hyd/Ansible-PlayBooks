@@ -1,0 +1,7 @@
+---
+- hosts: 192.168.121.138
+  tasks:
+  - name: Install Java in remote machines
+    yum:
+      name: java
+      state: latest

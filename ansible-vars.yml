@@ -1,0 +1,16 @@
+---
+ - hosts: nexusserver.com
+   vars:
+     port_no: 80
+     pkg_name: httpd
+
+   gather_facts: true 
+   tasks:
+   - debug:
+        msg:
+          - "The value of port is {{ port_no }}"
+          - "The Value of pkg is {{ pkg_name }}"
+          - "Ansible Version is {{ ansible_version }}"
+          
+
+

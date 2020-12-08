@@ -1,0 +1,7 @@
+---
+- hosts: 192.168.121.138
+  tasks:
+  - name: Git  Removel 
+    yum:
+      name: git
+      state: absent
